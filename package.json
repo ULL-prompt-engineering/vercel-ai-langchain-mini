@@ -1,12 +1,13 @@
 {
-  "name": "my-ai-app",
+  "name": "vercel-sdk-ai-quickstart",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "save": "git ci -am 'save'; git push"
   },
   "dependencies": {
     "ai": "^2.2.27",

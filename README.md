@@ -5,16 +5,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 We have used the following versions of node and pnpm:
 
 ```
-➜  my-ai-app git:(main) ✗ node --version
+➜  vercel-sdk-ai-quickstart git:(main) ✗ node --version
 v21.2.0
-➜  my-ai-app git:(main) ✗ pnpm --version
+➜  vercel-sdk-ai-quickstart git:(main) ✗ pnpm --version
 8.11.0
 ```
 
 I've got errors with `pnpm` relate to IP6 when using node.js version 20:
 
 ```
-➜  vercel-ai-quickstart-guide pnpm dlx create-next-app my-ai-app
+➜  vercel-ai-quickstart-guide pnpm dlx create-next-app vercel-sdk-ai-quickstart
  WARN  GET https://registry.npmjs.org/create-next-app error (ERR_INVALID_THIS). Will retry in 10 seconds. 2 retries left.
  WARN  GET https://registry.npmjs.org/create-next-app error (ERR_INVALID_THIS). Will retry in 1 minute. 1 retries left.
 /Users/casianorodriguezleon/Library/pnpm/store/v3/tmp/dlx-11440:
@@ -29,7 +29,7 @@ The problem was fixed using node.js version >=21
 The command used to create this project was:
 
 ```
-pnpm dlx create-next-app my-ai-app
+pnpm dlx create-next-app vercel-sdk-ai-quickstart
 ```
 
 To the questions, we answered:
@@ -41,12 +41,12 @@ To the questions, we answered:
 - [x] App Router
 - [ ] customize the default `import alias (@/*)`?
 
-`pnpm dlx create-next-app my-ai-app` fetches the package `create-next-app` from the registry without installing it as a dependency, hotloads it, and runs the default command binary it exposes with argument `my-ai-app`. Visit <https://pnpm.io/8.x/cli/dlx> for documentation about this command.
+`pnpm dlx create-next-app vercel-sdk-ai-quickstart` fetches the package `create-next-app` from the registry without installing it as a dependency, hotloads it, and runs the default command binary it exposes with argument `vercel-sdk-ai-quickstart`. Visit <https://pnpm.io/8.x/cli/dlx> for documentation about this command.
 
 then 
     
 ``` 
-cd my-ai-app
+cd vercel-sdk-ai-quickstart
 ```
 
 Next, we'll install `ai` and `openai`, OpenAI's official JavaScript SDK compatible with the Vercel Edge Runtime.
