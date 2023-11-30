@@ -5,13 +5,18 @@ import { OpenAIStream, StreamingTextResponse } from 'ai';
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
- 
+
 // Set the runtime to edge for best performance
 export const runtime = 'edge';
  
 export async function POST(req: Request) {
   const { prompt } = await req.json();
  
+  // Just to show you that env vars persist across requests
+  process.env.COUNTER = (Number(process.env.COUNTER) + 1).toString();
+  console.log('COUNTER', process.env.COUNTER) 
+
+
   // Ask OpenAI for a streaming completion given the prompt
   const response = await openai.completions.create({
     model: 'text-davinci-003',
